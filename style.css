@@ -1,6 +1,13 @@
 @font-face { font-family: Watcher; src: url('assets/WatcherPersonalUseBold-BWexB.ttf'); }
 @font-face { font-family: Slussen; src: url('assets/Slussen-Black-TRIAL.otf'); }
 @font-face { font-family: Suiza; src: url('assets/SuizaDEMO-Regular.otf'); }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
 :root
 {
     --main-border: 24px;
@@ -23,6 +30,7 @@ html, body
     background-position: center;
     border-radius: var(--main-border);
     filter: drop-shadow(8px 8px rgb(100, 100, 100));
+    animation: fadeIn 1s;
 }
 
 .logo
@@ -49,6 +57,7 @@ body
 .left
 {
     flex: 70%;
+    animation: fadeIn 1s;
 }
 
 .about
@@ -83,6 +92,7 @@ body
     background-image: linear-gradient(to bottom right, white, #e8faff);
     border-radius: var(--main-border);
     filter: drop-shadow(8px 8px rgb(100, 100, 100));
+    animation: fadeIn 1s;
 }
 
 .pillars h1
@@ -138,7 +148,7 @@ body
     font-size: clamp(12pt, 3vw, 16pt);
 }
 
-.calendar 
+.calendar
 {
     flex: 70%;
     display: flex;
@@ -221,6 +231,7 @@ body
     background-color: rgb(59, 59, 59);
     border-radius: var(--main-border);
     filter: drop-shadow(8px 8px rgb(100, 100, 100));
+    animation: fadeIn 1s;
 }
 
 .socials
@@ -268,6 +279,5 @@ body
 
 .cp
 {
-    margin-top: 20px;
     float: right;
 }
