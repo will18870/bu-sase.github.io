@@ -2,9 +2,20 @@
 @font-face { font-family: Slussen; src: url('assets/Slussen-Black-TRIAL.otf'); }
 @font-face { font-family: Suiza; src: url('assets/SuizaDEMO-Regular.otf'); }
 
-@keyframes fadeIn {
+@keyframes wait {
   0% { opacity: 0; }
-  100% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; top: -10px;}
+  100% { opacity: 1; top: 0px;}
+}
+
+@mixin anim($waitTime) {
+    animation:
+        wait $waitTime,
+        fadeIn 800ms $waitTime;
 }
 
 
@@ -30,7 +41,8 @@ html, body
     background-position: center;
     border-radius: var(--main-border);
     filter: drop-shadow(8px 8px rgb(100, 100, 100));
-    animation: fadeIn 1s;
+    animation: fadeIn 800ms;
+    position: relative;
 }
 
 .logo
@@ -57,7 +69,6 @@ body
 .left
 {
     flex: 70%;
-    animation: fadeIn 1s;
 }
 
 .about
@@ -68,6 +79,8 @@ body
     background-image: linear-gradient(to bottom right, white, #e8faff);
     border-radius: var(--main-border);
     filter: drop-shadow(8px 8px rgb(100, 100, 100));
+    animation: wait 60ms, fadeIn 800ms 60ms;
+    position: relative;
 }
 
 .about h2
@@ -92,7 +105,8 @@ body
     background-image: linear-gradient(to bottom right, white, #e8faff);
     border-radius: var(--main-border);
     filter: drop-shadow(8px 8px rgb(100, 100, 100));
-    animation: fadeIn 1s;
+    animation: wait 180ms, fadeIn 800ms 180ms;
+    position: relative;
 }
 
 .pillars h1
@@ -138,14 +152,14 @@ body
 .pillar h2
 {
     font-family: Slussen;
-    font-size: clamp(14pt, 3vw, 20pt);
+    font-size: clamp(18pt, 3vw, 20pt);
 }
 
 .pillar p
 {
     margin-top: -20px;
     font-family: Suiza;
-    font-size: clamp(12pt, 3vw, 16pt);
+    font-size: clamp(15pt, 3vw, 16pt);
 }
 
 .calendar
@@ -160,11 +174,13 @@ body
     background-image: linear-gradient(to bottom right, white, #e8faff);
     border-radius: var(--main-border);
     filter: drop-shadow(8px 8px rgb(100, 100, 100));
+    animation: wait 120ms, fadeIn 800ms 120ms;
+    position: relative;
 }
 
 .mainEvent
 {
-    flex: 1 1 650px;
+    flex: 1 1 600px;
 }
 
 .mainTop h2
@@ -231,7 +247,8 @@ body
     background-color: rgb(59, 59, 59);
     border-radius: var(--main-border);
     filter: drop-shadow(8px 8px rgb(100, 100, 100));
-    animation: fadeIn 1s;
+    animation: wait 240ms, fadeIn 800ms 240ms;
+    position: relative;
 }
 
 .socials
@@ -256,13 +273,13 @@ body
     display: inline-block;
     color: white;
     font-family: Suiza;
-    font-size: clamp(12pt, 3vw, 16pt);
+    font-size: clamp(14pt, 3vw, 16pt);
 }
 
 .su
 {
     font-family: Suiza;
-    font-size: clamp(12pt, 3vw, 16pt);
+    font-size: clamp(14pt, 3vw, 16pt);
     margin: 0px 10px;
     padding: 5px 10px;
     background-color: rgb(255, 247, 212);
