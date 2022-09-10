@@ -180,7 +180,7 @@ body
 
 .mainEvent
 {
-    flex: 1 1 600px;
+    flex: 1 1 550px;
 }
 
 .mainTop h2
@@ -199,7 +199,7 @@ body
 
 .mainEvent img
 {
-    width: 80%;
+    width: 90%;
     border-radius: var(--main-border);
 }
 
