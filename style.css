@@ -152,14 +152,14 @@ body
 .pillar h2
 {
     font-family: Slussen;
-    font-size: clamp(18pt, 3vw, 20pt);
+    font-size: clamp(18pt, 3vw, 21pt);
 }
 
 .pillar p
 {
     margin-top: -20px;
     font-family: Suiza;
-    font-size: clamp(15pt, 3vw, 16pt);
+    font-size: clamp(15pt, 3vw, 17pt);
 }
 
 .calendar
@@ -199,7 +199,7 @@ body
 
 .mainEvent img
 {
-    width: 90%;
+    width: 95%;
     border-radius: var(--main-border);
 }
 
