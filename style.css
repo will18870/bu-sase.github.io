@@ -257,10 +257,20 @@ body
     margin-bottom: 5px;
 }
 
+.icons
+{
+  vertical-align: middle;
+}
+
 .socials img
 {
-    width: clamp(32px, 3vw, 48px);;
+    height: clamp(32px, 3vw, 40px);
     vertical-align: middle;
+}
+
+.dcord
+{
+  padding-left: 7px;
 }
 
 .socials span
