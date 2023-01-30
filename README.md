@@ -1,2 +1,2 @@
 # bu-sase
-BU SASE's official website for 2022-2023
+BU SASE's retired website for 2022-2023 (no backend)
